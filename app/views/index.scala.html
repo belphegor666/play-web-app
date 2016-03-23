@@ -1,0 +1,23 @@
+@import helper._
+
+@main("Welcome to Play") {
+	<!--script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script-->
+
+    <h1>WS Test Page!</h1>
+    <input id="ctx" type="text"/>
+    <button id="submit" onclick="testWS()">GO!</button>
+	<hr/>
+	<p id="result"></p>
+
+    <script type='text/javascript'>
+        function testWS() {
+            var url = "http://web-tmr.apps.eu01.cf.canopy-cloud.com";
+            var context = document.getElementById("ctx").value;
+            alert(url+context);
+            $.get( url+context, function( data ) {
+                    $("#result" ).html( data );
+                    alert( "Load was performed." );
+                });
+        }
+    </script>
+}

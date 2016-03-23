@@ -1,0 +1,5 @@
+applications:
+- name: web-tmr
+  memory: 512M
+  host: web-tmr
+  path: /home/europa/play-web-app/target/universal/play-web-app-1.0-SNAPSHOT.zip
